@@ -64,3 +64,9 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 "# learnLaravelApiRest" 
+
+## Laravel commende line
+- php artisan make:model Product -rcm 
+- php artisan make:controller ApiController
+- php artisan jwt:secret
+- php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\LaravelServiceProvider"
