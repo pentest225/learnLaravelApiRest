@@ -69,4 +69,5 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 - php artisan make:model Product -rcm 
 - php artisan make:controller ApiController
 - php artisan jwt:secret
-- php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\LaravelServiceProvider"
+- php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\LaravelServiceProvider"  
+- php artisan make:migration add_author_to_products_table --table=products

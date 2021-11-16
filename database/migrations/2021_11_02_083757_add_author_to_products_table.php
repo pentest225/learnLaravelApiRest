@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class UpdateProductTable extends Migration
+class AddAuthorToProductsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,8 @@ class UpdateProductTable extends Migration
      */
     public function up()
     {
-        Schema::create('products', function (Blueprint $table) {
-            $table->renameColumn('sku','ontothename');
-            $table->string('price')->change()->nullable();
-            $table->string('author');
+        Schema::table('products', function (Blueprint $table) {
+            $table->string('author')->nullable();
         });
     }
 
@@ -27,6 +25,9 @@ class UpdateProductTable extends Migration
      */
     public function down()
     {
-        Schema::dropColumns('author');
+        Schema::table('products', function (Blueprint $table) {
+            $table->dropColumn('author');
+            //
+        });
     }
 }
